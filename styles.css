@@ -1,0 +1,799 @@
+
+
+:root{
+    --orange:var(--orange)
+}
+
+*{
+    font-family: 'Monsorret', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    transition: all .2s linear;
+    margin: 0;
+    padding: 0%;
+}
+
+*::selection{
+    background: var(--orange);
+    color: rgb(117, 133, 27);
+}
+
+html{
+    font-size: 62%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x:hidden;
+}
+
+section{
+    padding: 30px 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 100px 0;
+}
+
+.heading span{
+    background: rgb(214, 164, 0);
+    font-size: 20px;
+    color: rgb(250, 250, 250);
+    border-radius: 40%;
+    width: 26px;
+    padding: 12px 12px;
+    position: relative;
+    top: 27px;
+}
+
+.heading span.space{
+    background: none;
+}
+
+.btn{
+    color: #fff;
+    background: rgb(236, 174, 3);
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 1rem;
+    border: .2rem solid rgb(57, 78, 99);
+    border-radius: 20px;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: rgb(2, 2, 2);
+    background: rgb(247, 235, 130);
+}
+
+
+header{
+   background: rgb(42, 44, 44);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem 9%;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: rgb(204, 124, 19);
+    font-size: 32px;
+    font-weight: bolder;
+    position: relative;
+    right: 40px;
+}
+header .logo span{
+    color: yellow;
+}
+
+/*-----navigation bar links-----*/
+header .nav_bar a{
+    color: rgb(228, 224, 218);
+    font-size: 18px;
+    margin: 0 .8rem;
+    border:solid 20%;
+    box-shadow: #000;
+    width: 100px;
+    position: relative;
+    right: 20px;
+}
+
+/*-----hover mouse on navigation bar links-----*/
+header .nav_bar a:hover{
+    color: rgba(248, 112, 0, 0.795); 
+    
+
+}
+
+header .icon i{
+    color: rgb(185, 144, 7);
+    cursor:pointer;
+    font-size: 2.5rem;
+    margin-right: 32px;
+}
+
+header .icon i:hover{
+    color: rgb(173, 128, 43);
+}
+
+header .search-container{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: rgb(139, 132, 115);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    border-top: .1rem solid rgb(8, 8, 8);
+    clip-path: polygon(0 0,16px 0, 16px 0, 0 0);
+}
+
+
+header .search-container #search-bar{
+    color: #333;
+    padding: 16px;
+    width: 100%;
+    height: 30%;
+    text-transform: none;
+    font-size: 16px;
+    border-radius: 80px;
+}
+
+header .search-container.active{
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+
+}
+
+header .search-container label{
+    color: rgb(195, 211, 91);
+    font-size: 3rem;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+header .search-container label:hover{
+    color: rgb(10, 10, 10);
+}
+
+body{
+    height: 200rem;
+    background-color: rgba(22, 22, 22, 0.699);
+}
+/*----------------------------styling login------------------------*/
+
+.login-container{
+    position:fixed;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    min-height: 100vh;
+    z-index: 1000;
+    background: rgba(0,0,0,.7);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container.active{
+    top: 0px;
+}
+
+.login-container form h3{
+    color: rgb(254, 254, 254);
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 16px 0;
+}
+
+.login-container form{
+    background: rgb(238, 203, 122);
+    margin: 16px;
+    border-radius: 10%;
+    padding: 1.5rem 2rem;
+    width: 50%;
+    
+}
+
+.login-container form .box{
+    padding: 16px;
+    color: #333;
+    width: 100%;
+    font-size: 1.7rem;
+    margin: 6rem 0;
+    text-transform: none;
+    border: 1rem solid rgba(0,0,0,.3);
+}
+
+.login-container form label{
+    font-size: 1.5rem;
+    color: rgb(240, 240, 240);
+}
+
+
+.login-container form #remember{
+    margin: 2rem 0;
+}
+
+.login-container form .box:focus{
+    border-color:rgb(36, 33, 27);
+}
+
+
+
+.login-container form .btn{
+    display: block;
+    width: 100%;
+}
+
+.login-container form p{
+    color: rgb(255, 255, 255);
+    padding: .5rem 0;
+    font-size: 16px;
+}
+
+.login-container form p a{
+    color: rgb(255, 255, 255);
+}
+
+.login-container form p:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
+.login-container #form-close{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: rgb(238, 227, 227);
+    cursor: pointer;
+    
+    font-size: 5rem;
+}
+
+#menu-btn{
+    color: rgb(238, 135, 0);
+    border: .1rem solid rgb(201, 183, 19);
+    font-size: 3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    position: relative;
+    visibility: visible;
+}
+
+/*styling my home-------*/
+.home{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    z-index: 0;
+}
+
+.home .h-content p{
+    color: rgb(8, 8, 7);
+    font-size: 40px;
+    padding: 5rem 0;
+    font-family: cursive;
+}
+
+.home .h-content h3{
+    color: rgb(248, 211, 2);
+    font-family: fantasy;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-shadow: 5px 5px 10px rgb(218, 133, 6);
+}
+.home .h-content span{
+    color: rgb(224, 135, 0);
+    text-transform: lowercase;
+}
+.home .h-content{
+    text-align: center;
+}
+
+.home .video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home .cntr{
+    padding: 16px;
+    background: rgba(0,0,0,.7);
+    position: relative;
+    top: 10rem;
+    border-radius: 40px;
+}
+
+.home .cntr .v-btn{
+    background: #fff;
+    display: inline-block;
+    height: 38px;
+    width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+.home .cntr .v-btn.active{
+    background: orange;
+}
+
+
+/*-------------------------styling book--------------------------*/
+.book .book-form{
+    padding: 2rem;
+    background: rgb(230, 190, 117);
+}
+
+
+.book .book-form form {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 2rem;
+}
+
+.book .book-form form .inputbox{
+    flex:1 1 41rem;
+}
+
+.book .book-form form .inputbox input{
+    color: rgb(0, 0, 0);
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+    padding:1.2rem 1.4rem;
+    border: 1rem solid rgb(73, 65, 49);
+}
+
+.book .book-form form .inputbox input:focus{
+    background: rgb(157, 154, 139);
+}
+
+.book .book-form form .inputbox input:focus::placeholder{
+    color: rgb(230, 182, 24);
+}
+
+.book .book-form form .btn{
+    display: block;
+    width: 100%;
+}
+
+.book .book-form form span{
+    font-size: 16px;
+
+}
+/*-----------------------------------styling plsces----------------------------*/
+
+
+.places .pl-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.places .pl-container .pl{
+    border: 1rem white;
+    height: 25rem;
+    border-radius: .5rem;
+    position: relative;
+    flex: 1 1 30rem;
+    overflow: hidden;
+    box-shadow: #000;
+    
+}
+
+.places .pl-container .pl img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.places .pl-container .pl .content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    background: rgba(0,0,0,.7);
+    
+}
+
+.places .pl-container .pl:hover .content{
+    top: 0;
+}
+
+.places .pl-container .pl .content h3{
+    color: orange;
+    font-size: 2.5rem;
+
+}
+
+.places .pl-container .pl .content p{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+
+
+
+
+/*-------------------------------------------packages-----------*/
+
+.packages .p-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+
+.packages .p-container .p{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 16px 16px 2rem rgb(164, 167, 45);
+}
+
+
+.packages .p-container .p img{
+    object-fit: cover;
+    height: 25rem;
+    width: 100%;
+}
+
+.packages .p-container .p img:hover{
+    color: rgb(2, 2, 2);
+    background: rgb(247, 235, 130);
+}
+
+
+.packages .p-container .p .content{
+    padding: 2rem;
+}
+
+.packages .p-container .p .content h3{
+    color: rgb(168, 125, 45);
+    font-size: 20px;
+}
+
+.packages .p-container .p .content h3 i{
+    color: rgb(192, 8, 17);
+    padding: 20px;
+}
+
+.packages .p-container .p .content p{
+    color: white;
+    font-size: 23px;
+    padding: 2rem 0;
+}
+
+.packages .p-container .p .content .stars i{
+    color: red;
+    font-size: 17px;
+}
+
+.packages .p-container .p .content .price{
+    font-size: 18px;
+    color: #fff;
+    padding: 16px;
+}
+
+.packages .p-container .p .content .price span{
+    color: rgb(255, 166, 0);
+    font-size: 16px;
+    text-decoration:line-through;
+
+}
+
+/*----------------------------styling services----------*/
+.services .s-container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 1.5rem;
+
+}
+
+.services  .s-container .s{
+    text-align:center ;
+    padding: 1rem;
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+}
+
+.services  .s-container .s i {
+    color: red;
+    font-size: 5rem;
+    padding: 1rem;
+
+}
+
+.services  .s-container .s h3{
+    font-size: 2.5rem;
+    color: rgb(231, 182, 133);
+
+}
+
+.services  .s-container .s p{
+    color:white;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.services  .s-container .s p a{
+    color: rgb(170, 111, 111);
+}
+
+.services  .s-container .s p a:hover{
+    color: red;
+}
+
+.services  .s-container .s:hover{
+    box-shadow: 0 1rem 2rem rgb(0, 0, 0) ;
+}
+
+/*--------------------------styling gallary-------------------*/
+
+
+.gallary .g-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    filter: none;
+
+}
+
+.gallary .g-container .g{
+    border: 1rem white;
+    height: 25rem;
+    border-radius: .5rem;
+    position: relative;
+    flex: 1 1 30rem;
+    overflow: hidden;
+    box-shadow: #000;
+    
+}
+
+.gallary .g-container .g img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallary .g-container .g .content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    background: rgba(0,0,0,.7);
+    
+}
+
+.gallary .g-container .g:hover .content{
+    top: 0;
+}
+
+.gallary .g-container .g .content h3{
+    color: orange;
+    font-size: 2.5rem;
+
+}
+
+.gallary .g-container .g .content p{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+
+/*----------------------styling contact--------------------------------------*/
+.contact .c-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1.5em; 
+    align-items: center;
+
+}
+
+.contact .c-container .image{
+    flex: 1 1 35rem;
+
+
+}
+
+.contact .c-container form{
+    padding: 2rem;
+    flex: 1 1 50rem;
+    border-radius: .5rem;
+    box-shadow:0 1rem 2rem rgb(0, 0, 0) ;
+}
+
+
+.contact .c-container form .inputbox{
+    display:flex ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .c-container form .inputbox input{
+    color: rgb(255, 255, 255);
+    background: rgb(39, 34, 34);
+    font-size: 1.7rem;
+    width: 49%;
+    padding: 1rem;
+    margin: 1rem 0;
+    transform: none;
+
+}
+
+
+.contact .c-container form textarea{
+    color: rgb(255, 255, 255);
+    background: rgb(39, 34, 34);
+    font-size: 1.7rem;
+    width: 49%;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    resize: none;
+    height: 15rem;
+    transform: none;
+}
+
+.contact .c-container .image img{
+    width: 100%;
+    clip-path: circle(35%);
+}
+
+/*------------------------------styling footer---------------------------*/
+
+.footer{
+    background: rgba(51, 46, 46, 0.74);
+    
+}
+
+.footer .f-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem; 
+}
+
+
+.footer .f-container .f h3{
+    color: yellow;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+
+
+.footer .f-container .f a{
+    display:block;
+    color: white;
+    font-size: 16px;
+    padding-bottom: 1.5rem;    
+    
+}
+
+.footer .f-container .f a i{
+    color: white;
+    padding-right: .5rem;
+    transition: .2s linear;    
+    
+}
+
+.footer .f-container .f a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .cred{
+    color: white;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 2rem;
+    margin-top: 3rem;
+    border-top: .1rem solid black;
+}
+
+.footer .cred span{
+    color: yellow;
+}
+
+
+
+
+
+
+
+body{
+    height: 400px;
+}
+
+/*----adjusting responsiveness to screen*/
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    
+}
+.contact .c-container form .inputbox input{
+        width: 100%;
+}
+
+
+@media(max-width:900px){
+    header{
+        padding: 32px;
+    }
+
+section{
+    padding: 32px;
+    }   
+}
+
+
+@media(max-width:768px){
+    #menu-btn{
+        display: initial;
+    }
+    header .nav_bar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        border-top: 20px solid #000;
+        padding: 16px 32px;
+        clip-path: polygon( 0 0,100% 0, 100% 0, 0 0 );
+    }
+
+    header .nav_bar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+
+    header .nav_bar a{
+        display: block;
+        border-radius: 20px;
+        padding: 16px;
+        margin: 16px 0;
+        background: rgb(214, 159, 8);
+
+    }
+}
+
+@media (max-width:50%) {
+    html{
+        font-size: 50%;
+    }
+
+    .heading span{
+        font-size: 2.5rem;
+    }
+.contact .c-container form .inputbox input{
+    width: 100%;
+}
+
+}

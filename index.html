@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--i will include my links in this head tag-->
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--My Project title-->
+
+    <title>AlkaTour</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!--Linking css(cascading styles sheet) to index.html file-->
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <header  style="background-image: url(/images/footer-pic.jpeg);">
+        <a id="menu-btn" class=" fas fa-bars"></div>
+
+            <a href="index.html" class="logo"><span>ALKA</span>tour </a>
+
+            <nav class="nav_bar">
+                <a href="index.html">home</a>
+                <a href="book.html">book</a>
+                <a href="places.html">places</a>
+                <a href="packages.html">packages</a>
+                <a href="services.html">our-services</a>
+                <a href="gallary.html">gallary</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icon">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-user" id="login-btn"></i>
+            </div>
+
+            <form action="" method="" class="search-container">
+                <input type="search" id="search-bar" onchange="viewpage()" placeholder="search...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+
+    </header>
+
+
+    <!--this section of code is for loging in-->
+
+
+
+    <div class="login-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+        <form action="">
+            <h3>Login</h3>
+            <label for="email">Email</label>
+            <input type="email" class="box" placeholder="Enter email...." required>
+            <label for="psw">Password</label>
+            <input type="password" id="psw" name="psw"
+                title="invalid, password should have atleast a number, uppercase and atleast 6 or more characters"
+                class="box" placeholder="Enter password...." required>
+            <input type="submit" value="Login" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember user</label>
+            <p>i dont have an account <a href="#">click to reg..</a> </p>
+        </form>
+    </div>
+
+
+    <!--------------------------------------------his section contains everything about the home page------------------------>
+
+    <section class="home" id="home">
+
+        <div class="h-content">
+            <h3>EXPLORE CYPRUS WITH alka<span>tour</span></h3>
+            <p>Explore new places and have the best tour experience </p>
+            <a href="gallary.html" class="btn">Explore more..</a>
+        </div>
+
+        <div class="cntr">
+            <span class="v-btn active" data-src="images/background-videoClip.mp4"></span>
+            <span class="v-btn" data-src="images/background-videoClip2.mp4"></span>
+        </div>
+
+
+        <!---the below div tag contains the code for the background video-->
+
+
+        <div class="video-container">
+            <video src="images/background-videoClip.mp4" id="video-slider" loop autoplay></video>
+        </div>
+
+    </section>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
